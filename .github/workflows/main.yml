@@ -68,7 +68,7 @@ jobs:
         uses: docker/login-action@v2
         # При помощи with передаём в action параметры username и password
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: vlad2505
           password: ${{ secrets.DOCKER_PASSWORD }}
           # Хорошо ли держать логин и пароль прямо в коде workflow?
           # Нет, это не хорошо.
@@ -85,5 +85,5 @@ jobs:
           # В параметре tags задаётся название и тег для образа.
           # Для каждого пересобранного образа 
           # устанавливаем тег latest, чтобы потом
-          # на сервере и в docker-compose.yml не указывать версию
+          # на сервере и в docker-compose.yml не указывать версию.
           tags: ваш-логин-на-docker-hub/taski_backend:latest 
